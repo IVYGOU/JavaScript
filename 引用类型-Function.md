@@ -141,3 +141,32 @@ function sum(num1,num2) {
 console.log(sum.length);//2
 ```
 2. prototype
+每个函数都包括两个非继承而来的方法` apply()`和`call()`，在特定的作用域中调用函数。   
+
+* apply() 两个参数，一个是在其中运行函数的作用域，二是参数数组。
+
+```javascript
+function sum(num1,num2) {
+  return num1+num2;
+}
+function sum1(num1,num2){
+return sum.apply(this,arguments);//也可以写作return sum.apply(this,[num1,num2])
+}
+console.log(sum1(10,10));//20
+```
+        
+ 
+* call() 两个参数，一个是在其中运行函数的作用域，二是参数数组，必须逐个列举出来。
+
+```javascript
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+function sum1(num1, num2) {
+  return sum.call(this, num1, num2);
+}
+console.log(sum1(10, 10));//20
+```
+
+* 扩充函数运行的作用域
