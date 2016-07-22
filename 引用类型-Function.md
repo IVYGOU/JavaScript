@@ -2,13 +2,13 @@
 ## Function类型
 **函数是对象，函数名是指针**
 ### 定义
-*函数声明定义
+1.函数声明定义
 ```javascript
 function sum1(num1, num2) {
   return num1 + num2;
 }
 ```
-*函数表达式定义
+2.函数表达式定义
 ```javascript
 var sum2 =function(num1,num2){
 return num1+num2;
@@ -121,3 +121,12 @@ o.sayColor();//blue，this引用的是对象o
 ```
 
 3.caller
+```javascript
+function outer() {
+  inner();
+}
+function inner() {
+  console.log(inner.caller);//显示outer的源码，因为outer调用inner，因此caller指向outer,也可写成console.log(arguments.callee.caller);
+}
+outer();
+```
