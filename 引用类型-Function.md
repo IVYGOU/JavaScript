@@ -169,4 +169,32 @@ function sum1(num1, num2) {
 console.log(sum1(10, 10));//20
 ```
 
-* 扩充函数运行的作用域
+* 扩充函数运行的作用域(call()和apply()都可以)
+
+```javascript
+window.color = "red";
+var o = {  color: "blue"};
+
+function sayColor() {
+  console.log(this.color);
+}
+sayColor();//red
+
+sayColor.call(this);//red
+sayColor.call(window);//red
+sayColor.call(o);//blue
+```
+
+* bind()
+this值会被绑定到传给bind()函数的值
+
+```javascript
+window.color = "red";
+var o = {  color: "blue"};
+
+function sayColor() {
+  console.log(this.color);
+}
+var objectSaycolor=sayColor.bind(o);
+objectSaycolor();//blue
+```
