@@ -131,7 +131,7 @@ function inner() {
 outer();
 ```
 ### 函数的属性与方法
-1. length
+1.length
 函数希望接收的命名参数的个数     
 
 ```javascript
@@ -140,7 +140,7 @@ function sum(num1,num2) {
 }
 console.log(sum.length);//2
 ```
-2. prototype
+2.prototype
 每个函数都包括两个非继承而来的方法` apply()`和`call()`，在特定的作用域中调用函数。   
 
 * apply() 两个参数，一个是在其中运行函数的作用域，二是参数数组。
