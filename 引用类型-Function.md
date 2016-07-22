@@ -14,7 +14,7 @@ var sum2 =function(num1,num2){
 return num1+num2;
 };
 ```
-***函数末尾有一个分号***
+*NOTE：函数末尾有一个分号*
 ```javascript
 alert(sum(10, 10));
 function sum(num1, num2) {
