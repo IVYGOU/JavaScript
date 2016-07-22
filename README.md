@@ -1,6 +1,6 @@
-# JavaScript
-Learning Notes
-值传递参数
+# 值传递参数
+
+
 
 ##  参数：基本类型
 ```javascriot
