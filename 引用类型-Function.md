@@ -130,3 +130,6 @@ function inner() {
 }
 outer();
 ```
+### 函数的属性与方法
+1. length
+2. prototype
