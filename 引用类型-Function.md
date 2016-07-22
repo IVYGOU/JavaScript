@@ -195,6 +195,6 @@ var o = {  color: "blue"};
 function sayColor() {
   console.log(this.color);
 }
-var objectSaycolor=sayColor.bind(o);
+var objectSaycolor=sayColor.bind(o);//this值被绑定于o
 objectSaycolor();//blue
 ```
