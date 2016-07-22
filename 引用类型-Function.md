@@ -63,20 +63,15 @@ NOTE：此处传递的参数是函数指针，必须去掉函数后面的圆括�
 
 2.作为返回值
 ```javascript
-function createComparisonFunction(propertyName)
-{
-  return function(object1, object2) 
-  {
+function createComparisonFunction(propertyName) {
+  return function(object1, object2) {
     var value1 = object1[propertyName];
-    var value2 = object2[propertyName];//使用方括号表示法来取得给定属性的值
-    if (value1 < value2) 
-    {
+    var value2 = object2[propertyName]; //使用方括号表示法来取得给定属性的值
+    if (value1 < value2) {
       return -1;
-    } else if (value1 > value2) 
-    {
+    } else if (value1 > value2) {
       return 1;
-    } else(value1 = value2) 
-    {
+    } else(value1 = value2) {
       return 0;
     }
   };
@@ -87,6 +82,20 @@ console.log(data[0].name);//Ivy
 data.sort(createComparisonFunction("age"));
 console.log(data[0].name);//Mike
 ```
+### 函数内部属性
+1.arguments   
 
+一个类数组对象，包含传入函数中的所有参数，具有callee属性  
 
+阶乘的原始实现方法：
+```javascript
+function factorial(num) {
+  if (num <= 1) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
+}
+```
 
+2.this
