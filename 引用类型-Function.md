@@ -45,7 +45,8 @@ console.log(sum(10, 100));//20，多余的参数会被忽略
 ```
 
 ### 作为值的函数
-函数可作为参数传递给另一个函数，也可作为另一个函数的返回值。
+函数可作为参数传递给另一个函数，也可作为另一个函数的返回值。     
+
 1.作为参数
 ```javascript
 function callSomeFunction(someFunction, someArgument) {
@@ -57,7 +58,35 @@ function add10(num) {
 var result = callSomeFunction(add10, 10);
 console.log(result);//20
 ```
-NOTE：此处传递的参数是函数指针，必须去掉函数后面的圆括号。  （访问函数的指针而不执行的时候） 
+NOTE：此处传递的参数是函数指针，必须去掉函数后面的圆括号。  （访问函数的指针而不执行的时候）    
+
 
 2.作为返回值
+```javascript
+function createComparisonFunction(propertyName)
+{
+  return function(object1, object2) 
+  {
+    var value1 = object1[propertyName];
+    var value2 = object2[propertyName];//使用方括号表示法来取得给定属性的值
+    if (value1 < value2) 
+    {
+      return -1;
+    } else if (value1 > value2) 
+    {
+      return 1;
+    } else(value1 = value2) 
+    {
+      return 0;
+    }
+  };
+}
+var data=[{name:"Mike",age:21},{name:"Ivy",age:25}];
+data.sort(createComparisonFunction("name"));
+console.log(data[0].name);//Ivy
+data.sort(createComparisonFunction("age"));
+console.log(data[0].name);//Mike
+```
+
+
 
