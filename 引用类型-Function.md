@@ -97,5 +97,27 @@ function factorial(num) {
   }
 }
 ```
-
+函数的执行与函数名紧密耦合，为解决此问题可以用如下方法：
+```javascript
+function factorial(num) {
+  if (num <= 1) {
+    return 1;
+  } else {
+    return num * agruments.callee(num - 1);
+  }
+}
+```
 2.this
+
+```javascript
+window.color = "red";
+var o ={color:"blue"};
+function sayColor(){
+console.log(this.color);
+}
+sayColor();//red,全局作用域中调用sayColor()，this引用的是全局对象window
+o.sayColor=sayColor;
+o.sayColor();//blue，this引用的是对象o
+```
+
+3.caller
