@@ -132,4 +132,12 @@ outer();
 ```
 ### 函数的属性与方法
 1. length
+函数希望接收的命名参数的个数     
+
+```javascript
+function sum(num1,num2) {
+  return num1+num2;
+}
+console.log(sum.length);//2
+```
 2. prototype
