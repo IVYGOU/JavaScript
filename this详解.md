@@ -39,7 +39,8 @@ function foo(a) {
 var bar = new foo(2);  
 console.log(bar.a);  //2
 ```
-使用new调用函数，发生构造函数调用时，
+使用new调用函数，发生构造函数调用时，    
+
 1.会产生一个新的对象   
 
 2.这个对象会被执行[__proto__]的链接(bar.__proto__=foo.prototype)   
