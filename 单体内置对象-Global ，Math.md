@@ -35,4 +35,6 @@ Math.floor()//向下舍入
 
 Math.round()//四舍五入  
 
-* 随机数
+* 随机数   
+
+random()
