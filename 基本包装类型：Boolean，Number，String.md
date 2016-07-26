@@ -132,4 +132,52 @@ toLocaleUpperCase()，toLocaleLowerCase()是针对特定地区的实现，更稳
 
 6,  字符串模式匹配方法   
 
-match() 
+match()    接收一个参数，是一个RegExp对象或者一个正则表达式;返回一个数组。 
+
+```javascript
+var text = "cat, bat, sat, fat";
+var pattern = /.at/;
+//same as pattern.exec(text)
+var matches = text.match(pattern);
+alert(matches.index); //0
+alert(matches[0]); //”cat”
+alert(pattern.lastIndex); //0
+```
+
+search() 接收一个参数，是一个RegExp对象或者一个正则表达式；返回字符串第一个匹配项的索引。
+
+```javascript
+var text = "cat, bat, sat, fat";
+var pos = text.search(/at/);
+alert(pos); //1
+```
+
+replace() 替换子字符串，第一个参数是一个RegExp对象或者一个字符串；第二个参数可以是一个字符串或一个函数   
+     
+```javascript
+var text = "cat, bat, sat, fat";
+var result = text.replace("at", "ond");
+alert(result); //”cond, bat, sat, fat”
+result = text.replace(/at/g, "ond");
+alert(result); //”cond, bond, sond, fond”
+```
+
+
+7, localeCompare() 比较两个字符串    
+
+比较在字母表中的位置
+```javascript
+var stringValue = "yellow";
+alert(stringValue.localeCompare("brick")); //1 ，字符串参数之前
+alert(stringValue.localeCompare("yellow")); //0，等于字符串参数
+alert(stringValue.localeCompare("zoo")); //-1，字符串参数之后
+```
+ 
+ 8, fromCharCode() 接收字符编码再转换成字符串 
+ 
+ ```javascript
+alert(String.fromCharCode(104, 101, 108, 108, 111)); //”hello”
+```
+
+ 
+ 
