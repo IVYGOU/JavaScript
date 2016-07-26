@@ -40,3 +40,9 @@ alert(num.toFixed(2)); //”10.00”
 var num = 10.005;
 alert(num.toFixed(2)); //”10.01”
 ```
+3. toExponential() 指数表示法   
+ 
+```javascript
+var num = 10;
+alert(num.toExponential(1)); //”1.0e+1”
+```
