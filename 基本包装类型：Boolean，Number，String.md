@@ -18,3 +18,25 @@ alert(s1.color);//undefined
 * Number   
 
 `var numberObject = new Number(10);`
+
+1. toString()    
+
+```javascript
+var num = 10;
+alert(num.toString()); //”10”,默认10进制
+alert(num.toString(2)); //”1010”，2进制
+alert(num.toString(8)); //”12”，8进制
+alert(num.toString(10)); //”10”，10进制
+alert(num.toString(16)); //”a”，16进制
+```
+2. toFixed() 按照指定的小数位返回数值的字符串表示
+
+```javascript
+var num = 10;
+alert(num.toFixed(2)); //”10.00”
+```    
+
+```javascript
+var num = 10.005;
+alert(num.toFixed(2)); //”10.01”
+```
