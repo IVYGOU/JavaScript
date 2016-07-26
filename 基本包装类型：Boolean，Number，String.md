@@ -100,3 +100,22 @@ console.log(stringValue); //”hello”
  3，字符串位置方法 
  
  `indexOf()` and `lastIndexOf()`
+
+```javascript
+var stringValue = "hello world";
+console.log(stringValue.indexOf("o")); //4
+console.log(stringValue.lastIndexOf("o")); //7
+```  
+
+4, trim() 删除前缀和后缀的所有空格  
+ 
+ ```javascript
+var stringValue = "hello world";
+var trimmedStringValue = stringValue.trim();
+console.log(stringValue); //” hello world “
+console.log(trimmedStringValue); //”hello world” 
+```
+
+5,  字符串大小写转换    
+
+toLowerCase(), toLocaleLowerCase(), toUpperCase(), and toLocaleUpperCase().
