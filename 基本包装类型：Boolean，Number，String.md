@@ -72,4 +72,28 @@ charAt() 以单字符字符串的形式返回给定位置的字符
 ```javascript
 var stringValue = "hello world";
 console.log(stringValue.charAt(1)); //e
+```       
+
+也可以直接使用：   
+
+```javascript
+var stringValue = "hello world";
+alert(stringValue[1]);//e
+```
+
+charCodeAt() 以单字符字符串的形式返回给定位置的字符编码    
+
+```javascript
+var stringValue = "hello world";
+console.log(stringValue.charCodeAt(1)); //101
+```  
+
+2, 字符串操作方法 
+
+concat() 字符串拼接 
+```javascript
+var stringValue = "hello ";
+var result = stringValue.concat("world", "!");
+console.log(result); //”hello world”
+console.log(stringValue); //”hello”
 ```
