@@ -97,3 +97,6 @@ var result = stringValue.concat("world", "!");
 console.log(result); //”hello world”
 console.log(stringValue); //”hello”
 ```
+ 3，字符串位置方法 
+ 
+ `indexOf()` and `lastIndexOf()`
