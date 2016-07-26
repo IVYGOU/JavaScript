@@ -68,3 +68,8 @@ alert(stringValue.length); //”11”
 
 1, 字符方法  
 
+charAt() 以单字符字符串的形式返回给定位置的字符   
+```javascript
+var stringValue = "hello world";
+console.log(stringValue.charAt(1)); //e
+```
