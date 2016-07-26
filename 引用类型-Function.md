@@ -14,7 +14,8 @@ var sum2 =function(num1,num2){
 return num1+num2;
 };
 ```
-NOTE：函数末尾有一个分号
+NOTE：函数末尾有一个分号    
+
 3.函数声明与函数表达式区别
 解析器会率先读取函数声明（函数声明提升function  declaration hoisting），使其在执行任何代码之前可用。   
 如下使用正确：
