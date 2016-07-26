@@ -118,4 +118,18 @@ console.log(trimmedStringValue); //”hello world”
 
 5,  字符串大小写转换    
 
-toLowerCase(), toLocaleLowerCase(), toUpperCase(), and toLocaleUpperCase().
+toLowerCase(), toLocaleLowerCase(), toUpperCase(), and toLocaleUpperCase().    
+
+ ```javascript
+var stringValue = “hello world”;
+alert(stringValue.toLocaleUpperCase()); //”HELLO WORLD”
+alert(stringValue.toUpperCase()); //”HELLO WORLD”
+alert(stringValue.toLocaleLowerCase()); //”hello world”
+alert(stringValue.toLowerCase()); //”hello world”
+```
+
+toLocaleUpperCase()，toLocaleLowerCase()是针对特定地区的实现，更稳妥。   
+
+6,  字符串模式匹配方法   
+
+match() 
