@@ -17,7 +17,8 @@ return num1+num2;
 NOTE：函数末尾有一个分号    
 
 3.函数声明与函数表达式区别
-解析器会率先读取函数声明（函数声明提升function  declaration hoisting），使其在执行任何代码之前可用。   
+解析器会率先读取函数声明（函数声明提升function  declaration hoisting），使其在执行任何代码之前可用。
+
 如下使用正确：
 ```javascript
 alert(sum(10, 10));
@@ -43,6 +44,19 @@ var sum = function(num1) {
   return num1 + 10;
 };
 console.log(sum(10, 100));//20，多余的参数会被忽略
+```
+
+p.s.:变量定义也会提前，但是赋值不会被提前。
+```javascript
+(function() {
+  // Outputs: undefined
+  console.log(declaredLater);
+
+  var declaredLater = "Now it's defined!";
+
+  // Outputs: "Now it's defined!"
+  console.log(declaredLater);
+})();
 ```
 
 ### 作为值的函数
