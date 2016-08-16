@@ -33,19 +33,6 @@ var sum = function(num1, num2) {
   return num1 + num2;//出错，Uncaught TypeError: sum is not a function
 };
 ```
-
-### 没有重载
-声明两个同名函数的结果是后一个覆盖前一个
-```javascript
-function sum(num1, num2) {
-  return num1 + num2;
-}
-var sum = function(num1) {
-  return num1 + 10;
-};
-console.log(sum(10, 100));//20，多余的参数会被忽略
-```
-
 p.s.:变量定义也会提前，但是赋值不会被提前。
 ```javascript
 (function() {
@@ -58,6 +45,19 @@ p.s.:变量定义也会提前，但是赋值不会被提前。
   console.log(declaredLater);
 })();
 ```
+### 没有重载
+声明两个同名函数的结果是后一个覆盖前一个
+```javascript
+function sum(num1, num2) {
+  return num1 + num2;
+}
+var sum = function(num1) {
+  return num1 + 10;
+};
+console.log(sum(10, 100));//20，多余的参数会被忽略
+```
+
+
 
 ### 作为值的函数
 函数可作为参数传递给另一个函数，也可作为另一个函数的返回值。     
