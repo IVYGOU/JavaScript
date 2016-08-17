@@ -62,3 +62,5 @@ function foo() {
 var a = 2;  
 foo(); //undefined
 ```
+
+也可参考阮一峰博客：http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html
