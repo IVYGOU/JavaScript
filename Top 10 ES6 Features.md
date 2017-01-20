@@ -30,3 +30,22 @@ var roadPoem = `Then took the other, as just as fair,
 var fourAgreements = `You have the right to be you.
     You can only be you when you do your best.`
 ```
+
+4. Destructuring Assignment in ES6
+---
+```javascript
+var { house, mouse} = $('body').data() // we'll get house and mouse variables
+var {jsonMiddleware} = require('body-parser')
+var {username, password} = req.body
+```
+This also works with arrays:
+```javascript
+var [col1, col2]  = $('.column'),
+  [line1, line2, line3, , line5] = file.split('\n')
+```
+
+5. Enhanced Object Literals in ES6
+---
+```javascript
+
+```
